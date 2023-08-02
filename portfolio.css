@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+}
+section{
+    height: 500px;
+    padding-bottom: 120px;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    color: dimgray;
+}
+.name-color{
+    color: rgb(205, 137, 12);
+}
+.start-sec{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+    padding-left: 2%;
+    padding: 30px;
+}
+.start-sec img{
+    width: 100%;
+}
+.exp{
+    color:  rgb(205, 137, 12);
+    padding-left: 90px;
+}
+.wel{
+    color: rgb(205, 137, 12) ;
+}
+.top{
+   background: #000;
+}
+.btn{
+    background: darkorange;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    color: azure;
+    font-weight: 700;
+}
+.secound-sec{
+    background-image: url("backgroundzz/dream-bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.shadow-box{
+    box-shadow: 10px 10px 40px gray;
+    border-radius: 5px;
+    height: 50%;
+}
+.box{
+    background-image: url("backgroundzz/exp-bg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#fancy{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, lightsalmon, tomato);
+    border-image-slice: 1;
+}
+#style{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, cyan, gold);
+    border-image-slice: 1;
+} 
+.start-sec .links{
+    height: 44px;
+    width: 44px;
+}
+.con{
+    color:  rgb(205, 137, 12) ;
+}
+html,body {
+    margin:0;
+    background-color: #000;
+  }
+  .ani{
+    text-align: center;
+    color: rgb(0, 166, 255);
+    box-shadow: 10px 10px 30px gray;
+    border-radius: 5px;
+    height: 10%;
+    padding: 5px;
+    margin-left: 650px;
+    margin-right: 650px;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-image: linear-gradient(180deg, cyan, gold);
+    border-image-slice: 1;
+  }
+  
+  /* Bernard Bernoulli: Animación del personaje */
+  #bern {
+    /* Tamaño de la viñeta individual */
+    width:112px;
+    height:156px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    margin:auto;  
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url(https://i.imgur.com/ifk0SLH.png) repeat-x;
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:walk .8s steps(6) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+    position:relative;
+    bottom:34px;
+  }
+  
+  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+  @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-672px }
+  }
+  
+  /* Animación del cielo. Efecto "Parallax", va más lento que el mar. */
+  #sky {
+    background:url(https://i.imgur.com/PhHVjgw.png) repeat-X;
+    animation: movebg 9s linear infinite;
+  }
+  
+  /* Animación del mar. */
+  #sea {
+    background:url(https://i.imgur.com/h75XWy8.png) repeat-x;
+    animation: movebg 6s linear infinite;
+    /* Posicionamos el mar, para que no solape al cielo */
+    position:relative;
+    top:145px;
+    /* Pequeño degradado interior para suavizar el mar. Puede consumir muchos recursos */
+    box-shadow:10px 10px 45px RGBA(0,0,0, 0.85) inset;
+  }
+  
+  /* Animación para mover cielo y mar */
+  @keyframes movebg {
+    0% { background-position:550px } 
+    100% { background-position:0 }
+  }
+  
+  /* OPCIONAL: Guybrush */
+  #gb {
+    width:104px;
+    height:150px;
+    background:url(https://i.imgur.com/egTLaCy.png) no-repeat;
+    animation:gbwalk 1s steps(6) infinite;
+    margin:auto;
+    position:relative;
+    top:34px;
+    /* Ojo, muy costoso en rendimiento */
+    /* filter:drop-shadow(5px 5px 5px #000); */
+  }
+  
+  @keyframes gbwalk {
+    0% { background-position:0 }
+    100% { background-position:-624px }
+  }
